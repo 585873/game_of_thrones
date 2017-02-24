@@ -1,0 +1,8 @@
+<h1>Here are the characters</h1>
+<h2>  <% @characters.each do |character| %> </h2>
+  <div>
+    <a href="<%= characters_path(character) %>"><%= character.name %></a> - <%= character.house.name %>
+    <img src="<%= character.img_url%>">
+
+  </div>
+<% end %>
