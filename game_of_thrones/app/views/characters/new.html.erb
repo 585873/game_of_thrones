@@ -1,1 +1,10 @@
 <h1>Create new Characters here!</h1>
+<%= form_for @character do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :img_url %>
+  <%= f.text_field :img_url %>
+  <%= f.select(:house, options_for_select(@house_house))%>
+
+  <%= f.submit %>
+<% end %>
